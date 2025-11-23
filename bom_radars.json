@@ -1,0 +1,459 @@
+﻿[
+  {
+    "City": "Sydney",
+    "FriendlyName": "sydney",
+    "PrimaryRadarLocation": "Terrey Hills",
+    "RadarID": "71",
+    "Views": {
+      "64km": "http://reg.bom.gov.au/products/IDR714.loop.shtml",
+      "128km": "http://reg.bom.gov.au/products/IDR713.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR712.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR711.loop.shtml"
+    }
+  },
+  {
+    "City": "Melbourne",
+    "FriendlyName": "melbourne",
+    "PrimaryRadarLocation": "Laverton",
+    "RadarID": "02",
+    "Views": {
+      "64km": "http://reg.bom.gov.au/products/IDR024.loop.shtml",
+      "128km": "http://reg.bom.gov.au/products/IDR023.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR022.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR021.loop.shtml"
+    }
+  },
+  {
+    "City": "Brisbane",
+    "FriendlyName": "brisbane",
+    "PrimaryRadarLocation": "Mt Stapylton",
+    "RadarID": "66",
+    "Views": {
+      "64km": "http://reg.bom.gov.au/products/IDR664.loop.shtml",
+      "128km": "http://reg.bom.gov.au/products/IDR663.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR662.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR661.loop.shtml"
+    }
+  },
+  {
+    "City": "Brisbane (Secondary)",
+    "FriendlyName": "brisbane-secondary",
+    "PrimaryRadarLocation": "Marburg",
+    "RadarID": "50",
+    "Views": {
+      "64km": "http://reg.bom.gov.au/products/IDR504.loop.shtml",
+      "128km": "http://reg.bom.gov.au/products/IDR503.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR502.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR501.loop.shtml"
+    }
+  },
+  {
+    "City": "Perth",
+    "FriendlyName": "perth",
+    "PrimaryRadarLocation": "Serpentine",
+    "RadarID": "70",
+    "Views": {
+      "64km": "http://reg.bom.gov.au/products/IDR704.loop.shtml",
+      "128km": "http://reg.bom.gov.au/products/IDR703.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR702.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR701.loop.shtml"
+    }
+  },
+  {
+    "City": "Adelaide",
+    "FriendlyName": "adelaide",
+    "PrimaryRadarLocation": "Buckland Park",
+    "RadarID": "64",
+    "Views": {
+      "64km": "http://reg.bom.gov.au/products/IDR644.loop.shtml",
+      "128km": "http://reg.bom.gov.au/products/IDR643.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR642.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR641.loop.shtml"
+    }
+  },
+  {
+    "City": "Adelaide (Secondary)",
+    "FriendlyName": "adelaide-secondary",
+    "PrimaryRadarLocation": "Sellicks Hill",
+    "RadarID": "46",
+    "Views": {
+      "128km": "http://reg.bom.gov.au/products/IDR463.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR462.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR461.loop.shtml"
+    }
+  },
+  {
+    "City": "Canberra",
+    "FriendlyName": "canberra",
+    "PrimaryRadarLocation": "Captains Flat",
+    "RadarID": "40",
+    "Views": {
+      "64km": "http://reg.bom.gov.au/products/IDR404.loop.shtml",
+      "128km": "http://reg.bom.gov.au/products/IDR403.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR402.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR401.loop.shtml"
+    }
+  },
+  {
+    "City": "Hobart",
+    "FriendlyName": "hobart",
+    "PrimaryRadarLocation": "Mt Koonya",
+    "RadarID": "76",
+    "Views": {
+      "64km": "http://reg.bom.gov.au/products/IDR764.loop.shtml",
+      "128km": "http://reg.bom.gov.au/products/IDR763.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR762.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR761.loop.shtml"
+    }
+  },
+  {
+    "City": "Darwin",
+    "FriendlyName": "darwin",
+    "PrimaryRadarLocation": "Berrimah",
+    "RadarID": "63",
+    "Views": {
+      "64km": "http://reg.bom.gov.au/products/IDR634.loop.shtml",
+      "128km": "http://reg.bom.gov.au/products/IDR633.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR632.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR631.loop.shtml"
+    }
+  },
+  {
+    "City": "Newcastle",
+    "FriendlyName": "newcastle",
+    "PrimaryRadarLocation": "Newcastle",
+    "RadarID": "04",
+    "Views": {
+      "64km": "http://reg.bom.gov.au/products/IDR044.loop.shtml",
+      "128km": "http://reg.bom.gov.au/products/IDR043.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR042.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR041.loop.shtml"
+    }
+  },
+  {
+    "City": "Wollongong",
+    "FriendlyName": "wollongong",
+    "PrimaryRadarLocation": "Appin",
+    "RadarID": "03",
+    "Views": {
+      "64km": "http://reg.bom.gov.au/products/IDR034.loop.shtml",
+      "128km": "http://reg.bom.gov.au/products/IDR033.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR032.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR031.loop.shtml"
+    }
+  },
+  {
+    "City": "Cairns",
+    "FriendlyName": "cairns",
+    "PrimaryRadarLocation": "Saddle Mountain",
+    "RadarID": "19",
+    "Views": {
+      "64km": "http://reg.bom.gov.au/products/IDR194.loop.shtml",
+      "128km": "http://reg.bom.gov.au/products/IDR193.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR192.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR191.loop.shtml"
+    }
+  },
+  {
+    "City": "Townsville",
+    "FriendlyName": "townsville",
+    "PrimaryRadarLocation": "Hervey Range",
+    "RadarID": "106",
+    "Views": {
+      "64km": "http://reg.bom.gov.au/products/IDR1064.loop.shtml",
+      "128km": "http://reg.bom.gov.au/products/IDR1063.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR1062.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR1061.loop.shtml"
+    }
+  },
+  {
+    "City": "Alice Springs",
+    "FriendlyName": "alice-springs",
+    "PrimaryRadarLocation": "Alice Springs",
+    "RadarID": "25",
+    "Views": {
+      "128km": "http://reg.bom.gov.au/products/IDR253.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR252.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR251.loop.shtml"
+    }
+  },
+  {
+    "City": "Wagga Wagga",
+    "FriendlyName": "wagga-wagga",
+    "PrimaryRadarLocation": "Wagga Wagga",
+    "RadarID": "55",
+    "Views": {
+      "128km": "http://reg.bom.gov.au/products/IDR553.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR552.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR551.loop.shtml"
+    }
+  },
+  {
+    "City": "Mildura",
+    "FriendlyName": "mildura",
+    "PrimaryRadarLocation": "Cullulleraine",
+    "RadarID": "97",
+    "Views": {
+      "64km": "http://reg.bom.gov.au/products/IDR974.loop.shtml",
+      "128km": "http://reg.bom.gov.au/products/IDR973.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR972.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR971.loop.shtml"
+    }
+  },
+  {
+    "City": "Mount Isa",
+    "FriendlyName": "mount-isa",
+    "PrimaryRadarLocation": "Mount Isa",
+    "RadarID": "75",
+    "Views": {
+      "64km": "http://reg.bom.gov.au/products/IDR754.loop.shtml",
+      "128km": "http://reg.bom.gov.au/products/IDR753.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR752.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR751.loop.shtml"
+    }
+  },
+  {
+    "City": "Broome",
+    "FriendlyName": "broome",
+    "PrimaryRadarLocation": "Broome",
+    "RadarID": "17",
+    "Views": {
+      "64km": "http://reg.bom.gov.au/products/IDR174.loop.shtml",
+      "128km": "http://reg.bom.gov.au/products/IDR173.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR172.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR171.loop.shtml"
+    }
+  },
+  {
+    "City": "Geraldton",
+    "FriendlyName": "geraldton",
+    "PrimaryRadarLocation": "Geraldton",
+    "RadarID": "06",
+    "Views": {
+      "64km": "http://reg.bom.gov.au/products/IDR064.loop.shtml",
+      "128km": "http://reg.bom.gov.au/products/IDR063.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR062.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR061.loop.shtml"
+    }
+  },
+  {
+    "City": "Albany",
+    "FriendlyName": "albany",
+    "PrimaryRadarLocation": "Albany",
+    "RadarID": "31",
+    "Views": {
+      "64km": "http://reg.bom.gov.au/products/IDR314.loop.shtml",
+      "128km": "http://reg.bom.gov.au/products/IDR313.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR312.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR311.loop.shtml"
+    }
+  },
+  {
+    "City": "Mackay",
+    "FriendlyName": "mackay",
+    "PrimaryRadarLocation": "Mackay",
+    "RadarID": "22",
+    "Views": {
+      "64km": "http://reg.bom.gov.au/products/IDR224.loop.shtml",
+      "128km": "http://reg.bom.gov.au/products/IDR223.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR222.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR221.loop.shtml"
+    }
+  },
+  {
+    "City": "Bairnsdale",
+    "FriendlyName": "bairnsdale",
+    "PrimaryRadarLocation": "Bairnsdale",
+    "RadarID": "68",
+    "Views": {
+      "128km": "http://reg.bom.gov.au/products/IDR683.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR682.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR681.loop.shtml"
+    }
+  },
+  {
+    "City": "Yarrawonga",
+    "FriendlyName": "yarrawonga",
+    "PrimaryRadarLocation": "Yarrawonga",
+    "RadarID": "49",
+    "Views": {
+      "64km": "http://reg.bom.gov.au/products/IDR494.loop.shtml",
+      "128km": "http://reg.bom.gov.au/products/IDR493.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR492.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR491.loop.shtml"
+    }
+  },
+  {
+    "City": "Grafton",
+    "FriendlyName": "grafton",
+    "PrimaryRadarLocation": "Grafton",
+    "RadarID": "28",
+    "Views": {
+      "128km": "http://reg.bom.gov.au/products/IDR283.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR282.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR281.loop.shtml"
+    }
+  },
+  {
+    "City": "Moree",
+    "FriendlyName": "moree",
+    "PrimaryRadarLocation": "Moree",
+    "RadarID": "53",
+    "Views": {
+      "128km": "http://reg.bom.gov.au/products/IDR533.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR532.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR531.loop.shtml"
+    }
+  },
+  {
+    "City": "Namoi",
+    "FriendlyName": "namoi",
+    "PrimaryRadarLocation": "Blackjack Mountain",
+    "RadarID": "69",
+    "Views": {
+      "64km": "http://reg.bom.gov.au/products/IDR694.loop.shtml",
+      "128km": "http://reg.bom.gov.au/products/IDR693.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR692.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR691.loop.shtml"
+    }
+  },
+  {
+    "City": "Gympie",
+    "FriendlyName": "gympie",
+    "PrimaryRadarLocation": "Mt Kanigan",
+    "RadarID": "08",
+    "Views": {
+      "64km": "http://reg.bom.gov.au/products/IDR084.loop.shtml",
+      "128km": "http://reg.bom.gov.au/products/IDR083.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR082.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR081.loop.shtml"
+    }
+  },
+  {
+    "City": "Emerald",
+    "FriendlyName": "emerald",
+    "PrimaryRadarLocation": "Emerald",
+    "RadarID": "72",
+    "Views": {
+      "64km": "http://reg.bom.gov.au/products/IDR724.loop.shtml",
+      "128km": "http://reg.bom.gov.au/products/IDR723.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR722.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR721.loop.shtml"
+    }
+  },
+  {
+    "City": "Gladstone",
+    "FriendlyName": "gladstone",
+    "PrimaryRadarLocation": "Gladstone",
+    "RadarID": "23",
+    "Views": {
+      "128km": "http://reg.bom.gov.au/products/IDR233.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR232.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR231.loop.shtml"
+    }
+  },
+  {
+    "City": "Bowen",
+    "FriendlyName": "bowen",
+    "PrimaryRadarLocation": "Bowen",
+    "RadarID": "24",
+    "Views": {
+      "128km": "http://reg.bom.gov.au/products/IDR243.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR242.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR241.loop.shtml"
+    }
+  },
+  {
+    "City": "Weipa",
+    "FriendlyName": "weipa",
+    "PrimaryRadarLocation": "Weipa",
+    "RadarID": "78",
+    "Views": {
+      "64km": "http://reg.bom.gov.au/products/IDR784.loop.shtml",
+      "128km": "http://reg.bom.gov.au/products/IDR783.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR782.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR781.loop.shtml"
+    }
+  },
+  {
+    "City": "Gove",
+    "FriendlyName": "gove",
+    "PrimaryRadarLocation": "Gove",
+    "RadarID": "112",
+    "Views": {
+      "64km": "http://reg.bom.gov.au/products/IDR1124.loop.shtml",
+      "128km": "http://reg.bom.gov.au/products/IDR1123.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR1122.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR1121.loop.shtml"
+    }
+  },
+  {
+    "City": "Katherine",
+    "FriendlyName": "katherine",
+    "PrimaryRadarLocation": "Tindal",
+    "RadarID": "42",
+    "Views": {
+      "128km": "http://reg.bom.gov.au/products/IDR423.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR422.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR421.loop.shtml"
+    }
+  },
+  {
+    "City": "Warruwi",
+    "FriendlyName": "warruwi",
+    "PrimaryRadarLocation": "Warruwi",
+    "RadarID": "77",
+    "Views": {
+      "64km": "http://reg.bom.gov.au/products/IDR774.loop.shtml",
+      "128km": "http://reg.bom.gov.au/products/IDR773.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR772.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR771.loop.shtml"
+    }
+  },
+  {
+    "City": "Ceduna",
+    "FriendlyName": "ceduna",
+    "PrimaryRadarLocation": "Ceduna",
+    "RadarID": "33",
+    "Views": {
+      "64km": "http://reg.bom.gov.au/products/IDR334.loop.shtml",
+      "128km": "http://reg.bom.gov.au/products/IDR333.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR332.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR331.loop.shtml"
+    }
+  },
+  {
+    "City": "Mount Gambier",
+    "FriendlyName": "mount-gambier",
+    "PrimaryRadarLocation": "Mt Gambier",
+    "RadarID": "14",
+    "Views": {
+      "128km": "http://reg.bom.gov.au/products/IDR143.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR142.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR141.loop.shtml"
+    }
+  },
+  {
+    "City": "Woomera",
+    "FriendlyName": "woomera",
+    "PrimaryRadarLocation": "Woomera",
+    "RadarID": "27",
+    "Views": {
+      "128km": "http://reg.bom.gov.au/products/IDR273.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR272.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR271.loop.shtml"
+    }
+  },
+  {
+    "City": "West Takone",
+    "FriendlyName": "west-takone",
+    "PrimaryRadarLocation": "N.W. Tasmania",
+    "RadarID": "52",
+    "Views": {
+      "64km": "http://reg.bom.gov.au/products/IDR524.loop.shtml",
+      "128km": "http://reg.bom.gov.au/products/IDR523.loop.shtml",
+      "256km": "http://reg.bom.gov.au/products/IDR522.loop.shtml",
+      "512km": "http://reg.bom.gov.au/products/IDR521.loop.shtml"
+    }
+  }
+]
