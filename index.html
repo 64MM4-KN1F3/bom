@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOM Defused</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #81a8fc;
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+
+    .map-container {
+      position: relative;
+      width: 90%;
+      max-width: 800px;
+      aspect-ratio: auto;
+      /* Will adjust to image */
+    }
+
+    .map-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+
+    }
+
+    .city-marker {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      text-decoration: none;
+    }
+
+    .city-marker:hover {
+      transform: translate(-50%, -50%) scale(1.2);
+      z-index: 10;
+    }
+
+    .city-marker img {
+      width: 50px;
+      height: 50px;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6));
+      transition: transform 0.2s ease;
+    }
+
+    .city-marker:hover img {
+      transform: scale(1.1);
+    }
+
+    .tooltip {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.2s;
+      pointer-events: none;
+    }
+
+    .city-marker:hover .tooltip {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="map-container">
+    <img src="aus_map.png" alt="Australia Map" class="map-image">
+
+    <!-- Sydney -->
+    <a href="sydney.gif" class="city-marker" style="left: 81.89%; top: 71%;">
+      <span class="tooltip">Sydney</span>
+      <img src="radar.svg" alt="Sydney Radar">
+    </a>
+
+    <!-- Melbourne -->
+    <a href="melbourne.gif" class="city-marker" style="left: 69.5%; top: 80%;">
+      <span class="tooltip">Melbourne</span>
+      <img src="radar.svg" alt="Melbourne Radar">
+    </a>
+
+    <!-- Brisbane -->
+    <a href="brisbane.gif" class="city-marker" style="left: 86%; top: 47.5%;">
+      <span class="tooltip">Brisbane</span>
+      <img src="radar.svg" alt="Brisbane Radar">
+    </a>
+
+    <!-- Perth -->
+    <a href="perth.gif" class="city-marker" style="left: 10%; top: 61%;">
+      <span class="tooltip">Perth</span>
+      <img src="radar.svg" alt="Perth Radar">
+    </a>
+
+    <!-- Adelaide -->
+    <a href="adelaide.gif" class="city-marker" style="left: 55.5%; top: 69.5%;">
+      <span class="tooltip">Adelaide</span>
+      <img src="radar.svg" alt="Adelaide Radar">
+    </a>
+
+    <!-- Hobart -->
+    <a href="hobart.gif" class="city-marker" style="left: 75%; top: 96%;">
+      <span class="tooltip">Hobart</span>
+      <img src="radar.svg" alt="Hobart Radar">
+    </a>
+
+    <!-- Darwin -->
+    <a href="darwin.gif" class="city-marker" style="left: 40.29%; top: 12%;">
+      <span class="tooltip">Darwin</span>
+      <img src="radar.svg" alt="Darwin Radar">
+    </a>
+
+    <!-- Canberra -->
+    <a href="canberra.gif" class="city-marker" style="left: 78.4%; top: 73%;">
+      <span class="tooltip">Canberra</span>
+      <img src="radar.svg" alt="Canberra Radar">
+    </a>
+
+  </div>
+
+</body>
+
+</html>
