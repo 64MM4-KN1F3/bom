@@ -2,6 +2,7 @@
   {
     "City": "Sydney",
     "FriendlyName": "sydney",
+    "Timezone": "Australia/Sydney",
     "PrimaryRadarLocation": "Terrey Hills",
     "RadarID": "71",
     "Views": {
@@ -14,6 +15,7 @@
   {
     "City": "Melbourne",
     "FriendlyName": "melbourne",
+    "Timezone": "Australia/Melbourne",
     "PrimaryRadarLocation": "Laverton",
     "RadarID": "02",
     "Views": {
@@ -26,6 +28,7 @@
   {
     "City": "Brisbane",
     "FriendlyName": "brisbane",
+    "Timezone": "Australia/Brisbane",
     "PrimaryRadarLocation": "Mt Stapylton",
     "RadarID": "66",
     "Views": {
@@ -38,6 +41,7 @@
   {
     "City": "Brisbane (Secondary)",
     "FriendlyName": "brisbane-secondary",
+    "Timezone": "Australia/Brisbane",
     "PrimaryRadarLocation": "Marburg",
     "RadarID": "50",
     "Views": {
@@ -50,6 +54,7 @@
   {
     "City": "Perth",
     "FriendlyName": "perth",
+    "Timezone": "Australia/Perth",
     "PrimaryRadarLocation": "Serpentine",
     "RadarID": "70",
     "Views": {
@@ -62,6 +67,7 @@
   {
     "City": "Adelaide",
     "FriendlyName": "adelaide",
+    "Timezone": "Australia/Adelaide",
     "PrimaryRadarLocation": "Buckland Park",
     "RadarID": "64",
     "Views": {
@@ -74,6 +80,7 @@
   {
     "City": "Adelaide (Secondary)",
     "FriendlyName": "adelaide-secondary",
+    "Timezone": "Australia/Adelaide",
     "PrimaryRadarLocation": "Sellicks Hill",
     "RadarID": "46",
     "Views": {
@@ -85,6 +92,7 @@
   {
     "City": "Canberra",
     "FriendlyName": "canberra",
+    "Timezone": "Australia/Sydney",
     "PrimaryRadarLocation": "Captains Flat",
     "RadarID": "40",
     "Views": {
@@ -97,6 +105,7 @@
   {
     "City": "Hobart",
     "FriendlyName": "hobart",
+    "Timezone": "Australia/Hobart",
     "PrimaryRadarLocation": "Mt Koonya",
     "RadarID": "76",
     "Views": {
@@ -109,6 +118,7 @@
   {
     "City": "Darwin",
     "FriendlyName": "darwin",
+    "Timezone": "Australia/Darwin",
     "PrimaryRadarLocation": "Berrimah",
     "RadarID": "63",
     "Views": {
@@ -121,6 +131,7 @@
   {
     "City": "Newcastle",
     "FriendlyName": "newcastle",
+    "Timezone": "Australia/Sydney",
     "PrimaryRadarLocation": "Newcastle",
     "RadarID": "04",
     "Views": {
@@ -133,6 +144,7 @@
   {
     "City": "Wollongong",
     "FriendlyName": "wollongong",
+    "Timezone": "Australia/Sydney",
     "PrimaryRadarLocation": "Appin",
     "RadarID": "03",
     "Views": {
@@ -145,6 +157,7 @@
   {
     "City": "Cairns",
     "FriendlyName": "cairns",
+    "Timezone": "Australia/Brisbane",
     "PrimaryRadarLocation": "Saddle Mountain",
     "RadarID": "19",
     "Views": {
@@ -157,6 +170,7 @@
   {
     "City": "Townsville",
     "FriendlyName": "townsville",
+    "Timezone": "Australia/Brisbane",
     "PrimaryRadarLocation": "Hervey Range",
     "RadarID": "106",
     "Views": {
@@ -169,6 +183,7 @@
   {
     "City": "Alice Springs",
     "FriendlyName": "alice-springs",
+    "Timezone": "Australia/Darwin",
     "PrimaryRadarLocation": "Alice Springs",
     "RadarID": "25",
     "Views": {
@@ -180,6 +195,7 @@
   {
     "City": "Wagga Wagga",
     "FriendlyName": "wagga-wagga",
+    "Timezone": "Australia/Sydney",
     "PrimaryRadarLocation": "Wagga Wagga",
     "RadarID": "55",
     "Views": {
@@ -191,6 +207,7 @@
   {
     "City": "Mildura",
     "FriendlyName": "mildura",
+    "Timezone": "Australia/Melbourne",
     "PrimaryRadarLocation": "Cullulleraine",
     "RadarID": "97",
     "Views": {
@@ -203,6 +220,7 @@
   {
     "City": "Mount Isa",
     "FriendlyName": "mount-isa",
+    "Timezone": "Australia/Brisbane",
     "PrimaryRadarLocation": "Mount Isa",
     "RadarID": "75",
     "Views": {
@@ -215,6 +233,7 @@
   {
     "City": "Broome",
     "FriendlyName": "broome",
+    "Timezone": "Australia/Perth",
     "PrimaryRadarLocation": "Broome",
     "RadarID": "17",
     "Views": {
@@ -227,6 +246,7 @@
   {
     "City": "Geraldton",
     "FriendlyName": "geraldton",
+    "Timezone": "Australia/Perth",
     "PrimaryRadarLocation": "Geraldton",
     "RadarID": "06",
     "Views": {
@@ -239,6 +259,7 @@
   {
     "City": "Albany",
     "FriendlyName": "albany",
+    "Timezone": "Australia/Perth",
     "PrimaryRadarLocation": "Albany",
     "RadarID": "31",
     "Views": {
@@ -251,6 +272,7 @@
   {
     "City": "Mackay",
     "FriendlyName": "mackay",
+    "Timezone": "Australia/Brisbane",
     "PrimaryRadarLocation": "Mackay",
     "RadarID": "22",
     "Views": {
@@ -263,6 +285,7 @@
   {
     "City": "Bairnsdale",
     "FriendlyName": "bairnsdale",
+    "Timezone": "Australia/Melbourne",
     "PrimaryRadarLocation": "Bairnsdale",
     "RadarID": "68",
     "Views": {
@@ -274,6 +297,7 @@
   {
     "City": "Yarrawonga",
     "FriendlyName": "yarrawonga",
+    "Timezone": "Australia/Melbourne",
     "PrimaryRadarLocation": "Yarrawonga",
     "RadarID": "49",
     "Views": {
@@ -286,6 +310,7 @@
   {
     "City": "Grafton",
     "FriendlyName": "grafton",
+    "Timezone": "Australia/Sydney",
     "PrimaryRadarLocation": "Grafton",
     "RadarID": "28",
     "Views": {
@@ -297,6 +322,7 @@
   {
     "City": "Moree",
     "FriendlyName": "moree",
+    "Timezone": "Australia/Sydney",
     "PrimaryRadarLocation": "Moree",
     "RadarID": "53",
     "Views": {
@@ -308,6 +334,7 @@
   {
     "City": "Namoi",
     "FriendlyName": "namoi",
+    "Timezone": "Australia/Sydney",
     "PrimaryRadarLocation": "Blackjack Mountain",
     "RadarID": "69",
     "Views": {
@@ -320,6 +347,7 @@
   {
     "City": "Gympie",
     "FriendlyName": "gympie",
+    "Timezone": "Australia/Brisbane",
     "PrimaryRadarLocation": "Mt Kanigan",
     "RadarID": "08",
     "Views": {
@@ -332,6 +360,7 @@
   {
     "City": "Emerald",
     "FriendlyName": "emerald",
+    "Timezone": "Australia/Brisbane",
     "PrimaryRadarLocation": "Emerald",
     "RadarID": "72",
     "Views": {
@@ -344,6 +373,7 @@
   {
     "City": "Gladstone",
     "FriendlyName": "gladstone",
+    "Timezone": "Australia/Brisbane",
     "PrimaryRadarLocation": "Gladstone",
     "RadarID": "23",
     "Views": {
@@ -355,6 +385,7 @@
   {
     "City": "Bowen",
     "FriendlyName": "bowen",
+    "Timezone": "Australia/Brisbane",
     "PrimaryRadarLocation": "Bowen",
     "RadarID": "24",
     "Views": {
@@ -366,6 +397,7 @@
   {
     "City": "Weipa",
     "FriendlyName": "weipa",
+    "Timezone": "Australia/Brisbane",
     "PrimaryRadarLocation": "Weipa",
     "RadarID": "78",
     "Views": {
@@ -378,6 +410,7 @@
   {
     "City": "Gove",
     "FriendlyName": "gove",
+    "Timezone": "Australia/Darwin",
     "PrimaryRadarLocation": "Gove",
     "RadarID": "112",
     "Views": {
@@ -390,6 +423,7 @@
   {
     "City": "Katherine",
     "FriendlyName": "katherine",
+    "Timezone": "Australia/Darwin",
     "PrimaryRadarLocation": "Tindal",
     "RadarID": "42",
     "Views": {
@@ -401,6 +435,7 @@
   {
     "City": "Warruwi",
     "FriendlyName": "warruwi",
+    "Timezone": "Australia/Darwin",
     "PrimaryRadarLocation": "Warruwi",
     "RadarID": "77",
     "Views": {
@@ -413,6 +448,7 @@
   {
     "City": "Ceduna",
     "FriendlyName": "ceduna",
+    "Timezone": "Australia/Adelaide",
     "PrimaryRadarLocation": "Ceduna",
     "RadarID": "33",
     "Views": {
@@ -425,6 +461,7 @@
   {
     "City": "Mount Gambier",
     "FriendlyName": "mount-gambier",
+    "Timezone": "Australia/Adelaide",
     "PrimaryRadarLocation": "Mt Gambier",
     "RadarID": "14",
     "Views": {
@@ -436,6 +473,7 @@
   {
     "City": "Woomera",
     "FriendlyName": "woomera",
+    "Timezone": "Australia/Adelaide",
     "PrimaryRadarLocation": "Woomera",
     "RadarID": "27",
     "Views": {
@@ -447,6 +485,7 @@
   {
     "City": "West Takone",
     "FriendlyName": "west-takone",
+    "Timezone": "Australia/Hobart",
     "PrimaryRadarLocation": "N.W. Tasmania",
     "RadarID": "52",
     "Views": {
