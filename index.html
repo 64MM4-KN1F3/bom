@@ -34,6 +34,7 @@
       width: 90%;
       max-width: 800px;
       aspect-ratio: auto;
+      margin-bottom: 3rem;
       /* Will adjust to image */
     }
 
@@ -93,9 +94,21 @@
       width: 100%;
       color: rgba(0, 0, 0, 0.5);
       text-align: center;
-      padding: 1rem 0;
+      padding: 2rem 0;
       margin-top: auto;
-      font-size: 0.8rem;
+      font-size: 0.7rem;
+    }
+
+    .github-link img {
+      width: 20px;
+      height: 20px;
+      opacity: 0.5;
+      transition: opacity 0.2s;
+      vertical-align: middle;
+    }
+
+    .github-link:hover img {
+      opacity: 1;
     }
   </style>
 </head>
@@ -156,7 +169,13 @@
   </div>
 
   <footer>
-    Created for my personal use. Radars may be outdated, always check UTC time. Contact: info@bom-defused.com.au
+    Created for my personal use. Radars may be outdated, always check UTC time.
+    <br>
+    Contact: info@bom-defused.com.au
+    <br>
+    <a href="https://github.com/64MM4-KN1F3/bom" class="github-link">
+      <img src="github.svg" alt="Source Code">
+    </a>
   </footer>
 
 </body>
