@@ -5,8 +5,10 @@ import requests
 import argparse
 import re
 import json
-from PIL import Image, ImageSequence
+from PIL import Image, ImageSequence, ImageDraw, ImageFont
 from io import BytesIO
+
+import datetime
 
 def get_image_urls(page_url, base_url="https://reg.bom.gov.au"):
     """
@@ -64,6 +66,7 @@ def fetch_image(url, name="image"):
 def create_animated_radar(page_url, output_gif_path, crop=False):
     """
     Downloads frames and layers, composites them, and saves as an animated GIF.
+    Also saves a sidecar .json file with the timestamp of the last frame.
     Returns True on success.
     """
     urls = get_image_urls(page_url)
@@ -120,6 +123,18 @@ def create_animated_radar(page_url, output_gif_path, crop=False):
                 duration=500,
                 loop=0
             )
+            
+            # Extract timestamp from last frame URL
+            # Format: .../IDR714.T.202511271009.png
+            last_frame_url = urls['frames'][-1]
+            match = re.search(r'\.(\d{12})\.png$', last_frame_url)
+            if match:
+                timestamp_str = match.group(1)
+                # Save to sidecar JSON
+                sidecar_path = f"{output_gif_path}.json"
+                with open(sidecar_path, 'w') as f:
+                    json.dump({"timestamp": timestamp_str}, f)
+            
             # print(f"Saved animated GIF to {output_gif_path}")
             return True
         else:
@@ -133,6 +148,7 @@ def stack_animated_gifs(gif_paths, output_path):
     """
     Stacks multiple animated GIFs vertically.
     Moves the top 16px header from the first GIF to the bottom of the stack.
+    Checks for outdated data and overlays a warning if needed.
     """
     try:
         gifs = [Image.open(path) for path in gif_paths]
@@ -140,12 +156,55 @@ def stack_animated_gifs(gif_paths, output_path):
         if not gifs:
             return False
 
+        # Check for outdated data
+        is_outdated = False
+        current_utc = datetime.datetime.now(datetime.timezone.utc)
+        
+        for path in gif_paths:
+            sidecar_path = f"{path}.json"
+            if os.path.exists(sidecar_path):
+                try:
+                    with open(sidecar_path, 'r') as f:
+                        data = json.load(f)
+                        timestamp_str = data.get("timestamp")
+                        if timestamp_str:
+                            # Parse YYYYMMDDHHMM
+                            # BOM times are UTC
+                            dt = datetime.datetime.strptime(timestamp_str, "%Y%m%d%H%M").replace(tzinfo=datetime.timezone.utc)
+                            age = current_utc - dt
+                            if age > datetime.timedelta(minutes=15):
+                                is_outdated = True
+                                break
+                except Exception as e:
+                    print(f"Warning: Could not check timestamp for {path}: {e}")
+
         # Ensure they have the same number of frames or handle mismatch
         n_frames = min(g.n_frames for g in gifs)
         
         frames = []
         header_height = 16
         
+        # Load font for warning
+        font = None
+        # List of fonts to try (Linux, macOS, Windows)
+        font_candidates = [
+            "DejaVuSans.ttf",
+            "FreeSans.ttf",
+            "Arial.ttf",
+            "/System/Library/Fonts/Helvetica.ttc",
+            "/System/Library/Fonts/Supplemental/Arial.ttf"
+        ]
+        
+        for font_name in font_candidates:
+            try:
+                font = ImageFont.truetype(font_name, 20)
+                break
+            except IOError:
+                continue
+        
+        if font is None:
+            font = ImageFont.load_default()
+
         for i in range(n_frames):
             current_frames = []
             for g in gifs:
@@ -185,6 +244,81 @@ def stack_animated_gifs(gif_paths, output_path):
             # Paste header at the bottom
             new_img.paste(header, (0, current_y))
             
+            # Overlay warning if outdated
+            if is_outdated:
+                draw = ImageDraw.Draw(new_img)
+                text = "radar capture outdated" # Removed emoji
+                
+                # Calculate text size
+                if hasattr(draw, "textbbox"):
+                    bbox = draw.textbbox((0, 0), text, font=font)
+                    text_width = bbox[2] - bbox[0]
+                    text_height = bbox[3] - bbox[1]
+                else:
+                    text_width, text_height = draw.textsize(text, font=font)
+                
+                # Symbol dimensions
+                symbol_size = 18
+                padding = 3
+                box_padding = 4 # Padding for the background box
+                
+                total_content_width = symbol_size + padding + text_width
+                total_content_height = max(symbol_size, text_height)
+                
+                start_x = (total_width - total_content_width) // 2
+                y_pos = 3 # Moved down slightly to ensure top border is visible
+                
+                # Draw Background Box
+                box_left = start_x - box_padding
+                box_top = y_pos - box_padding + 2
+                box_right = start_x + total_content_width + box_padding
+                box_bottom = y_pos + total_content_height + (box_padding / 2)
+                
+                draw.rectangle(
+                    [box_left, box_top, box_right, box_bottom],
+                    fill=(255, 255, 255, 255),
+                    outline=(255, 0, 0, 255),
+                    width=1
+                )
+                
+                # Draw Symbol (Red Triangle with Exclamation)
+                triangle_points = [
+                    (start_x + symbol_size // 2, y_pos), # Top
+                    (start_x, y_pos + symbol_size),      # Bottom Left
+                    (start_x + symbol_size, y_pos + symbol_size) # Bottom Right
+                ]
+                draw.polygon(triangle_points, fill=(255, 0, 0, 255))
+                
+                # Draw Exclamation Mark (White)
+                # Simple approximation: a line and a dot
+                excl_x = start_x + symbol_size // 2
+                draw.line([(excl_x, y_pos + 5), (excl_x, y_pos + 12)], fill=(255, 255, 255, 255), width=3)
+                draw.point((excl_x, y_pos + 15), fill=(255, 255, 255, 255))
+                # Make the dot a bit bigger
+                draw.rectangle([excl_x-1, y_pos+15, excl_x+1, y_pos+17], fill=(255, 255, 255, 255))
+
+                # Draw Text (Aliased)
+                text_x = start_x + symbol_size + padding
+                
+                # Create a 1-bit mask for the text to ensure no anti-aliasing
+                # We use the bbox dimensions to ensure we capture descenders
+                mask = Image.new('1', (text_width, text_height), 0)
+                mask_draw = ImageDraw.Draw(mask)
+                
+                # Draw text onto mask, offsetting by the bbox top-left to capture all ink
+                # bbox is (left, top, right, bottom) relative to drawing position (0,0)
+                # So we draw at (-left, -top)
+                if hasattr(draw, "textbbox"):
+                     mask_draw.text((-bbox[0], -bbox[1]), text, font=font, fill=1)
+                else:
+                     mask_draw.text((0, 0), text, font=font, fill=1)
+                
+                # Create a solid red image to paste
+                color_img = Image.new('RGBA', (text_width, text_height), (255, 0, 0, 255))
+                
+                # Paste onto the main image using the mask
+                new_img.paste(color_img, (text_x, y_pos), mask)
+
             # Quantize
             frame_img = new_img.convert("RGB").quantize(colors=256, method=Image.MAXCOVERAGE, dither=Image.NONE)
             frames.append(frame_img)
@@ -212,7 +346,8 @@ def parse_range(range_str):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Scrape and process BOM radar animated images for multiple cities.")
-    parser.add_argument("--dev", action="store_true", help="Run in development mode (skip scraping, just stack existing temp files if they exist).")
+    parser.add_argument("--dev-capture", action="store_true", help="Capture mode: Generate temp files but do not stack or delete them.")
+    parser.add_argument("--dev-process", action="store_true", help="Process mode: Stack existing temp files but do not generate new ones or delete them.")
     args = parser.parse_args()
 
     json_path = "bom_radars.json"
@@ -250,29 +385,43 @@ if __name__ == "__main__":
             temp_filename = f"temp_{friendly_name}_{range_key}.gif"
             temp_gifs.append(temp_filename)
             
-            if not args.dev:
+            # Generation Logic
+            should_generate = True
+            if args.dev_process:
+                should_generate = False
+            
+            if should_generate:
                 print(f"  Generating {range_key} radar GIF...")
                 success = create_animated_radar(url, temp_filename)
                 if not success:
                     print(f"  Failed to create GIF for {range_key}, skipping this view.")
                     temp_gifs.pop() # Remove failed file from list
-            else:
-                if not os.path.exists(temp_filename):
-                    print(f"  Dev mode: {temp_filename} missing, cannot proceed with this view.")
-                    temp_gifs.pop()
 
-        if temp_gifs:
-            output_filename = f"{friendly_name}.gif"
-            print(f"  Stacking {len(temp_gifs)} GIFs into {output_filename}...")
-            stack_success = stack_animated_gifs(temp_gifs, output_filename)
-            
-            if stack_success:
-                # Cleanup temp files
-                if not args.dev:
-                    for temp in temp_gifs:
-                        if os.path.exists(temp):
-                            os.remove(temp)
+        # Stacking Logic
+        should_stack = True
+        if args.dev_capture:
+            should_stack = False
+
+        if should_stack:
+            if temp_gifs:
+                output_filename = f"{friendly_name}.gif"
+                print(f"  Stacking {len(temp_gifs)} GIFs into {output_filename}...")
+                stack_success = stack_animated_gifs(temp_gifs, output_filename)
+                
+                if stack_success:
+                    # Cleanup temp files
+                    # Only cleanup if NOT in any dev mode
+                    if not (args.dev_capture or args.dev_process):
+                        for temp in temp_gifs:
+                            if os.path.exists(temp):
+                                os.remove(temp)
+                            # Cleanup sidecar json
+                            sidecar = f"{temp}.json"
+                            if os.path.exists(sidecar):
+                                os.remove(sidecar)
+                else:
+                    print("  Stacking failed.")
             else:
-                print("  Stacking failed.")
+                print("  No valid GIFs generated to stack.")
         else:
-            print("  No valid GIFs generated to stack.")
+            print("  Skipping stacking (Capture Mode).")
